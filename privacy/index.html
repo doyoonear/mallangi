@@ -1,57 +1,166 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy for Mallangi</title>
-  <meta name="description" content="Privacy Policy for Mallangi.">
+  <title>말랑이 개인정보 처리방침 · Mallangi Privacy Policy</title>
+  <meta name="description" content="말랑이의 PostHog 앱 품질 분석과 향후 버전의 선택적 Singular 설치 측정 안내. Privacy information in 한국어, English, 日本語.">
   <style>
     :root { color-scheme: dark; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #03050d; color: #f8fbff; }
+    * { box-sizing: border-box; }
     body { margin: 0; background: radial-gradient(circle at 20% 10%, rgba(122,227,232,.16), transparent 34%), linear-gradient(145deg, #000, #050813 55%, #0b1023); }
     main { width: min(760px, calc(100% - 40px)); margin: 0 auto; padding: 48px 0 72px; }
-    a { color: #8cf4ef; }
-    .card { border: 1px solid rgba(255,255,255,.14); border-radius: 28px; padding: 32px; background: rgba(255,255,255,.07); box-shadow: 0 24px 80px rgba(0,0,0,.34); backdrop-filter: blur(18px); }
-    h1 { margin: 0 0 8px; font-size: clamp(34px, 7vw, 56px); letter-spacing: -.04em; }
-    h2 { margin: 30px 0 10px; font-size: 22px; }
-    p, li { color: rgba(248,251,255,.78); line-height: 1.65; font-size: 16px; }
-    .muted { color: rgba(248,251,255,.52); }
-    .back { display: inline-block; margin-bottom: 18px; text-decoration: none; }
+    a { color: #8cf4ef; overflow-wrap: anywhere; text-underline-offset: .2em; }
+    a:focus-visible { outline: 3px solid #8cf4ef; outline-offset: 5px; border-radius: 3px; }
+    .card { border: 1px solid rgba(255,255,255,.14); border-radius: 28px; padding: clamp(20px, 4vw, 32px); background: rgba(255,255,255,.07); box-shadow: 0 24px 80px rgba(0,0,0,.34); }
+    .card + .card { margin-top: 28px; }
+    h1 { margin: 0 0 12px; font-size: clamp(30px, 7vw, 48px); letter-spacing: -.04em; }
+    h2 { margin: 0 0 12px; font-size: 28px; }
+    h3 { margin: 30px 0 10px; font-size: 21px; }
+    p, li, nav { color: #d5d9e0; line-height: 1.7; font-size: 16px; overflow-wrap: anywhere; }
+    li + li { margin-top: 10px; }
+    ul { padding-inline-start: 24px; }
+    .muted { color: #b9c0cd; }
+    .back, .top { display: inline-block; padding: 12px 0; }
+    .back { margin-bottom: 6px; }
+    .languages { display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 12px 0 24px; }
+    .languages a { display: inline-block; padding: 10px 0; }
+    .notice { padding: 16px; border-inline-start: 3px solid #8cf4ef; background: rgba(140,244,239,.06); }
+    article { scroll-margin-top: 24px; }
   </style>
 </head>
 <body>
-  <main>
-    <a class="back" href="../">← Mallangi</a>
-    <section class="card">
-      <h1>Privacy Policy for Mallangi</h1>
-      <p class="muted">Effective date: August 13, 2026</p>
-      <p>Mallangi is a simple digital sensory toy app. We collect a limited amount of pseudonymous app-usage data to understand which interactions are useful and to improve the app.</p>
+  <main id="top" tabindex="-1">
+    <a class="back" href="../" lang="en">← Mallangi</a>
+    <header>
+      <h1>말랑이 개인정보 처리방침</h1>
+      <p lang="en">Privacy Policy for Mallangi</p>
+      <nav class="languages" aria-label="언어 / Language / 言語">
+        <a href="#ko" lang="ko" hreflang="ko">한국어</a>
+        <a href="#en" lang="en" hreflang="en">English</a>
+        <a href="#ja" lang="ja" hreflang="ja">日本語</a>
+      </nav>
+    </header>
 
-      <h2>Data Collection</h2>
-      <p>We collect pseudonymous product-interaction data, such as app opens, play interaction categories and duration ranges, selected squishy types, sound-setting changes, and settings or support-link opens. We use a randomly generated app-installation identifier to distinguish event sequences on the same installation.</p>
-      <p>PostHog automatically adds limited technical context to each event: app version and build, bundle identifier, device model/type, operating-system version, screen dimensions, language, time zone, Wi-Fi or cellular connection category, TestFlight/sideload status, an anonymous session identifier, and the PostHog SDK version.</p>
-      <p>We do not collect names, email addresses, account details, advertising identifiers, contacts, precise location, raw touch coordinates, touch identifiers, or raw touch-pressure, speed, and movement data.</p>
+    <article class="card" id="ko" lang="ko" aria-labelledby="title-ko" tabindex="-1">
+      <h2 id="title-ko">개인정보 처리방침 · 한국어</h2>
+      <p class="muted">기존 앱 품질 분석 안내 적용일: <time datetime="2026-08-13">2026년 8월 13일</time></p>
+      <p>말랑이는 간단한 디지털 감각 놀이 앱입니다. 어떤 조작이 유용한지 파악하고 앱을 개선하기 위해, 이름 대신 임의 식별자를 사용하는 제한된 이용 정보를 PostHog로 분석합니다.</p>
+      <p class="notice"><strong>버전별 적용 범위:</strong> 현재 출시 버전 1.1.2는 PostHog를 사용하며 Singular 설치 측정은 포함하지 않습니다. 아래 Singular 안내는 향후 <strong>설치 측정 선택 화면을 제공하는 버전</strong>에만 적용됩니다. 해당 기능은 아직 출시되지 않았습니다.</p>
 
-      <h2>Analytics Provider</h2>
-      <p>We use PostHog, Inc. to process this pseudonymous analytics data in the United States. PostHog is configured to discard client IP addresses.</p>
+      <h3>1. PostHog: 기존 앱 품질 분석</h3>
+      <p>앱 열기, 놀이 조작 범주와 지속 시간 구간, 선택한 말랑이 종류, 소리 설정 변경, 설정 화면이나 지원 링크 열기 등을 수집합니다. 같은 설치에서 발생한 이벤트의 흐름을 구분하기 위해 설치별로 임의 생성한 식별자를 사용합니다.</p>
+      <p>PostHog는 이벤트에 앱 버전·빌드·번들 식별자, 기기 모델·유형, 운영체제 버전, 화면 크기, 언어, 시간대, Wi-Fi·셀룰러 연결 구분, TestFlight·사이드로드 여부, 익명 세션 식별자와 PostHog SDK 버전을 함께 기록합니다.</p>
+      <p>분석 처리는 미국의 PostHog, Inc.에서 이루어지며, 클라이언트 IP 주소는 폐기하도록 설정되어 있습니다. 이 PostHog 분석 정보를 광고에 사용하거나 광고 네트워크·데이터 중개업체와 공유하거나 제3자 정보와 결합하지 않습니다. PostHog 분석으로 다른 앱이나 웹사이트에서의 활동을 추적하지 않습니다.</p>
+      <p><strong>PostHog 분석은 아래 Singular 설치 측정 선택과 별개입니다.</strong> 설치 측정을 거부하거나 철회해도 기존 PostHog 분석은 계속됩니다.</p>
 
-      <h2>Tracking and Advertising</h2>
-      <p>Mallangi does not track you across apps or websites. We do not use analytics data for advertising, share it with advertising networks or data brokers, or combine it with third-party data.</p>
+      <h3>2. Singular: 향후 버전의 선택적 설치 측정</h3>
+      <p>광고를 통한 앱 설치와 이용 시작을 측정하기 위해 Singular Labs, Inc.의 서비스를 추가할 예정입니다. 해당 버전에서는 사용자가 만 18세 이상임을 확인하고 명시적으로 동의한 뒤에만 Singular SDK가 시작됩니다. 동의하지 않은 상태에서는 앱을 시작해도 Singular가 실행되지 않으며, 만 18세 미만은 이 측정에 참여할 수 없습니다.</p>
+      <p>생년월일은 수집하지 않습니다. 만 18세 이상 확인 여부, 설치 측정 선택 상태와 동의 안내 버전만 기기에 저장합니다. 동의하지 않아도 앱의 모든 기능을 이용할 수 있습니다.</p>
+      <ul>
+        <li><strong>처리될 수 있는 정보:</strong> 설치·세션 정보, IDFV(개발사별 기기 식별자) 또는 SDK 기기 식별자, 기기·운영체제·앱 정보, IP 주소 등 접속 정보입니다. Singular에도 PostHog와 같은 IP 폐기 설정이 적용된다는 뜻은 아닙니다.</li>
+        <li><strong>전송에서 제외할 정보:</strong> IDFA(광고 식별자), 이름, 이메일, 생년월일, 말랑이 조작 상세와 매출 정보입니다. 클립보드를 통한 설치 출처 확인, 딥링크와 리타겟팅은 사용하지 않도록 구성할 예정입니다.</li>
+      </ul>
+      <p>Singular의 설치 측정은 광고 목적의 별도 처리이며, 위 PostHog 분석에 대한 광고 이용·공유 제한 설명과 구분됩니다.</p>
 
-      <h2>Accounts</h2>
-      <p>Mallangi does not require account creation or login.</p>
+      <h3>3. 설치 측정 동의와 철회</h3>
+      <p>설치 측정 선택 화면에서 거부할 수 있으며, 동의한 뒤에도 앱 설정에서 언제든 철회할 수 있습니다. 철회하면 Singular의 이후 추적과 전송을 중단합니다. <strong>이미 전송된 정보가 자동으로 삭제되는 것은 아닙니다.</strong> 삭제 문의는 아래 연락처를 이용해 주세요. 이 선택과 철회는 Singular에만 적용되며 PostHog 분석을 끄지 않습니다.</p>
 
-      <h2>Network</h2>
-      <p>The app sends only the pseudonymous analytics data described above to PostHog. It does not provide other network features.</p>
+      <h3>4. 국외 처리와 보관</h3>
+      <p>PostHog 분석 정보는 앱 이용 중 네트워크를 통해 미국의 PostHog, Inc.로 전송됩니다. 향후 설치 측정 제공 버전에서 동의하면, Singular가 실행되는 동안 위 설치 측정 정보가 네트워크를 통해 미국의 Singular Labs, Inc.에 전달되어 처리될 수 있습니다. Singular의 데이터 처리 계약에는 미국의 AWS(Amazon Web Services, Inc.)가 데이터·클라우드 저장을 위한 하위 처리자로 기재되어 있습니다.</p>
+      <p>Singular 처리 정보의 보관기간은 말랑이에 적용되는 서비스 계약(Service Entitlement)에 따라 정해집니다. 자세한 내용은 <a href="https://www.singular.net/terms/">Singular 약관의 Data Processing Agreement</a>를 참고해 주세요. <a href="https://www.singular.net/privacy-policy/">Singular 개인정보 처리방침</a>에는 웹사이트 방문자·기업 고객 정보에 대한 안내도 포함되어 있으므로, 그 전체가 말랑이 앱의 수집 항목을 뜻하지는 않습니다.</p>
 
-      <h2>Device Features</h2>
-      <p>Mallangi uses haptic feedback on supported devices and plays sound effects bundled with the app. The app does not request access to the camera, microphone, photos, contacts, or location.</p>
+      <h3>5. 수집하지 않는 정보와 기기 기능</h3>
+      <p>앱은 이름, 이메일, 계정 정보, 광고 식별자(IDFA), 연락처, 정확한 위치, 원시 터치 좌표·터치 식별자, 터치 압력·속도·이동 원시 데이터를 수집하지 않습니다. 지원되는 기기에서 햅틱 피드백을 사용하며 앱에 포함된 효과음을 재생합니다. 카메라, 마이크, 사진, 연락처나 위치 접근 권한은 요청하지 않습니다.</p>
+      <p>계정 생성이나 로그인이 필요하지 않습니다. 아동을 포함한 이용자에게 이름·이메일 같은 직접 식별 정보를 의도적으로 수집하지 않습니다. Singular의 만 18세 이상 확인은 설치 측정에만 적용되며, 기존 PostHog 분석에 대한 설명은 위와 같습니다.</p>
+      <p>1.1.2의 앱 내 네트워크 전송은 위에서 설명한 PostHog 분석에 한정되며, 다른 네트워크 기능은 제공하지 않습니다. 향후 설치 측정 제공 버전에서는 동의한 경우 Singular 전송이 추가됩니다.</p>
 
-      <h2>Children's Privacy</h2>
-      <p>We do not knowingly collect direct personal information from children or any other users.</p>
+      <h3>6. 문의와 삭제 요청</h3>
+      <p>개인정보 문의나 PostHog·Singular 데이터 삭제 요청은 <a href="mailto:mallangi.support@gmail.com">mallangi.support@gmail.com</a>으로 보내 주세요. 앱 버전과 문의할 서비스를 알려 주시면 확인에 도움이 됩니다. 로그인 계정이 없어 해당 설치의 데이터를 찾기 위한 추가 정보가 필요할 수 있습니다. 삭제는 자동으로 이루어지지 않으며, 대상 정보를 식별하고 PostHog·Singular 각 서비스에서 처리 가능한 범위를 확인한 뒤 절차를 안내하겠습니다.</p>
+      <p>문의 메일로 직접 보내신 이메일 주소와 내용은 문의 응대를 위해 사용합니다. 위의 앱 수집 제외 항목과는 구분됩니다. Singular의 개인정보 문의 주소는 <a href="mailto:privacy@singular.net">privacy@singular.net</a>입니다.</p>
+      <p><a href="./2026-08-13.html" hreflang="en">이전 정책: 2026년 8월 13일 적용 안내(영문)</a></p>
+      <a class="top" href="#top">언어 선택으로 돌아가기 ↑</a>
+    </article>
 
-      <h2>Contact</h2>
-      <p>If you have any questions, contact us at <a href="mailto:mallangi.support@gmail.com">mallangi.support@gmail.com</a>.</p>
-    </section>
+    <article class="card" id="en" lang="en" aria-labelledby="title-en" tabindex="-1">
+      <h2 id="title-en">Privacy Policy · English</h2>
+      <p class="muted">Existing app-quality analytics notice effective: <time datetime="2026-08-13">August 13, 2026</time></p>
+      <p>Mallangi is a simple digital sensory toy app. We collect limited pseudonymous app-usage data through PostHog to understand which interactions are useful and to improve the app.</p>
+      <p class="notice"><strong>Version scope:</strong> The currently released version, 1.1.2, uses PostHog and does not include Singular installation measurement. The Singular notice below applies only to a future <strong>version that provides an installation-measurement choice screen</strong>. This feature has not been released yet.</p>
+
+      <h3>1. PostHog: existing app-quality analytics</h3>
+      <p>We collect app opens, play interaction categories and duration ranges, selected squishy types, sound-setting changes, and settings or support-link opens. We use a randomly generated app-installation identifier to distinguish event sequences on the same installation.</p>
+      <p>PostHog adds app version and build, bundle identifier, device model/type, operating-system version, screen dimensions, language, time zone, Wi-Fi or cellular connection category, TestFlight/sideload status, an anonymous session identifier, and the PostHog SDK version to events.</p>
+      <p>PostHog, Inc. processes this analytics data in the United States and is configured to discard client IP addresses. We do not use this PostHog analytics data for advertising, share it with advertising networks or data brokers, or combine it with third-party data. PostHog analytics does not track your activity across other apps or websites.</p>
+      <p><strong>PostHog analytics is separate from the Singular installation-measurement choice below.</strong> Declining or withdrawing installation measurement does not stop existing PostHog analytics.</p>
+
+      <h3>2. Singular: optional installation measurement in a future version</h3>
+      <p>We plan to add services from Singular Labs, Inc. to measure app installations and the start of app use following advertising. In that version, the Singular SDK starts only after you confirm that you are at least 18 and explicitly consent. Without consent, Singular does not run when the app starts. Users under 18 cannot participate in this measurement.</p>
+      <p>We do not collect your date of birth. Only your confirmation of being at least 18, your installation-measurement choice, and the consent-notice version are stored on your device. You can use every app feature if you decline.</p>
+      <ul>
+        <li><strong>Data that may be processed:</strong> installation and session information, IDFV (a device identifier scoped to an app vendor) or an SDK device identifier, device/OS/app information, and connection information such as IP address. PostHog's IP-discard setting does not mean the same setting applies to Singular.</li>
+        <li><strong>Data to be excluded from transmission:</strong> IDFA (advertising identifier), name, email, date of birth, detailed Mallangi play interactions, and revenue information. We plan to configure the integration without clipboard-based attribution, deep links, or retargeting.</li>
+      </ul>
+      <p>Singular installation measurement is separate processing for advertising measurement. The advertising-use and sharing restrictions described above for PostHog analytics refer to that analytics service.</p>
+
+      <h3>3. Installation-measurement consent and withdrawal</h3>
+      <p>You can decline on the installation-measurement choice screen and withdraw consent at any time in the app's settings. Withdrawal stops future Singular tracking and transmissions. <strong>It does not automatically delete data already sent.</strong> For deletion inquiries, use the contacts below. This choice and withdrawal apply only to Singular and do not turn off PostHog analytics.</p>
+
+      <h3>4. International processing and retention</h3>
+      <p>PostHog analytics data is sent over the network to PostHog, Inc. in the United States during app use. If you consent in a future version offering installation measurement, the measurement data described above may be transmitted over the network to Singular Labs, Inc. in the United States while Singular is running. Singular's data-processing agreement lists AWS (Amazon Web Services, Inc.) in the United States as a subprocessor for data and cloud storage.</p>
+      <p>Retention of data processed by Singular is determined by the Service Entitlement applicable to Mallangi. See the <a href="https://www.singular.net/terms/">Data Processing Agreement in Singular's terms</a>. The <a href="https://www.singular.net/privacy-policy/">Singular privacy policy</a> also covers website visitors and business customers; its full list of data categories does not describe what the Mallangi app collects.</p>
+
+      <h3>5. Data we do not collect and device features</h3>
+      <p>The app does not collect names, email addresses, account details, advertising identifiers (IDFA), contacts, precise location, raw touch coordinates, touch identifiers, or raw touch-pressure, speed, and movement data. Mallangi uses haptic feedback on supported devices and plays sound effects bundled with the app. It does not request access to the camera, microphone, photos, contacts, or location.</p>
+      <p>No account creation or login is required. We do not knowingly collect direct identifiers such as names or email addresses from children or other users. Singular's age-18 confirmation applies only to installation measurement; existing PostHog analytics is described above.</p>
+      <p>In version 1.1.2, in-app network transmissions are limited to the PostHog analytics described above, with no other network features. Future versions offering installation measurement add Singular transmissions if you consent.</p>
+
+      <h3>6. Questions and deletion requests</h3>
+      <p>For privacy questions or requests to delete PostHog or Singular data, contact <a href="mailto:mallangi.support@gmail.com">mallangi.support@gmail.com</a>. Please mention your app version and the service your request concerns. Because there is no login account, additional information may be needed to locate data for your installation. Deletion is not automatic. We will explain the next steps after identifying the relevant data and reviewing the scope of deletion supported by the service concerned, PostHog or Singular.</p>
+      <p>If you email us, we use the email address and message you provide to respond. This is separate from the data excluded from app collection above. You can also contact Singular about privacy at <a href="mailto:privacy@singular.net">privacy@singular.net</a>.</p>
+      <p><a href="./2026-08-13.html" hreflang="en">Previous policy: effective August 13, 2026 (English)</a></p>
+      <a class="top" href="#top">Back to language selection ↑</a>
+    </article>
+
+    <article class="card" id="ja" lang="ja" aria-labelledby="title-ja" tabindex="-1">
+      <h2 id="title-ja">プライバシーポリシー · 日本語</h2>
+      <p class="muted">従来のアプリ品質分析に関する案内の適用日：<time datetime="2026-08-13">2026年8月13日</time></p>
+      <p>Mallangiは、シンプルなデジタル感覚遊びアプリです。役立つ操作を把握してアプリを改善するため、名前の代わりにランダムな識別子を使う、限定的な利用情報をPostHogで分析します。</p>
+      <p class="notice"><strong>バージョンごとの適用範囲：</strong>現在公開されているバージョン1.1.2ではPostHogを使用し、Singularによるインストール測定は含まれていません。以下のSingularの案内は、今後<strong>インストール測定の選択画面を提供するバージョン</strong>にのみ適用されます。この機能はまだ公開されていません。</p>
+
+      <h3>1. PostHog：従来のアプリ品質分析</h3>
+      <p>アプリの起動、遊びの操作カテゴリと継続時間の範囲、選択したスクイーズの種類、サウンド設定の変更、設定画面やサポートリンクを開いたことなどを収集します。同じインストールで発生したイベントの流れを区別するため、インストールごとにランダムに生成した識別子を使用します。</p>
+      <p>PostHogは、アプリのバージョン・ビルド・バンドル識別子、端末モデル・種類、OSバージョン、画面サイズ、言語、タイムゾーン、Wi-Fi・モバイル回線の区分、TestFlight・サイドロードの状態、匿名のセッション識別子、PostHog SDKのバージョンをイベントに追加します。</p>
+      <p>この分析情報は米国のPostHog, Inc.で処理され、クライアントのIPアドレスは破棄する設定になっています。このPostHog分析情報を広告に利用したり、広告ネットワーク・データ仲介業者と共有したり、第三者の情報と組み合わせたりしません。PostHog分析によって他のアプリやウェブサイトでの活動を追跡することはありません。</p>
+      <p><strong>PostHog分析は、以下のSingularインストール測定の選択とは別です。</strong>インストール測定を拒否したり同意を撤回したりしても、従来のPostHog分析は継続します。</p>
+
+      <h3>2. Singular：今後のバージョンでの任意のインストール測定</h3>
+      <p>広告を通じたアプリのインストールと利用開始を測定するため、Singular Labs, Inc.のサービスを追加する予定です。対象バージョンでは、18歳以上であることを確認し、明示的に同意した場合にのみSingular SDKが開始されます。同意がない場合、アプリを起動してもSingularは動作しません。18歳未満の方はこの測定に参加できません。</p>
+      <p>生年月日は収集しません。18歳以上であることの確認結果、インストール測定の選択状態、同意案内のバージョンのみを端末に保存します。同意しなくても、アプリのすべての機能を利用できます。</p>
+      <ul>
+        <li><strong>処理される可能性のある情報：</strong>インストール・セッション情報、IDFV（開発元ごとの端末識別子）またはSDKの端末識別子、端末・OS・アプリ情報、IPアドレスなどの接続情報です。PostHogのIPアドレス破棄設定がSingularにも適用されるという意味ではありません。</li>
+        <li><strong>送信から除外する情報：</strong>IDFA（広告識別子）、名前、メールアドレス、生年月日、Mallangiでの詳細な遊びの操作、売上情報です。クリップボードによるインストール元の判定、ディープリンク、リターゲティングは利用しない構成にする予定です。</li>
+      </ul>
+      <p>Singularのインストール測定は広告測定を目的とする別の処理です。上記のPostHog分析に関する広告利用・共有の制限の説明とは区別されます。</p>
+
+      <h3>3. インストール測定への同意と撤回</h3>
+      <p>インストール測定の選択画面で拒否でき、同意した後もアプリの設定からいつでも撤回できます。撤回すると、それ以降のSingularによる追跡と送信を停止します。<strong>すでに送信された情報が自動的に削除されるわけではありません。</strong>削除については以下の連絡先にお問い合わせください。この選択と撤回はSingularにのみ適用され、PostHog分析は停止しません。</p>
+
+      <h3>4. 国外での処理と保存</h3>
+      <p>PostHog分析情報は、アプリ利用中にネットワークを通じて米国のPostHog, Inc.へ送信されます。今後インストール測定を提供するバージョンで同意した場合、Singularの動作中に上記の測定情報がネットワークを通じて米国のSingular Labs, Inc.へ送信され、処理される可能性があります。Singularのデータ処理契約には、米国のAWS（Amazon Web Services, Inc.）がデータ・クラウド保存のための再委託先として記載されています。</p>
+      <p>Singularが処理する情報の保存期間は、Mallangiに適用されるサービス契約（Service Entitlement）により定められます。<a href="https://www.singular.net/terms/">Singular利用規約内のData Processing Agreement</a>をご参照ください。<a href="https://www.singular.net/privacy-policy/">Singularのプライバシーポリシー</a>にはウェブサイト訪問者や企業顧客の情報に関する案内も含まれるため、その全項目がMallangiアプリの収集情報を示すものではありません。</p>
+
+      <h3>5. 収集しない情報と端末機能</h3>
+      <p>アプリは、名前、メールアドレス、アカウント情報、広告識別子（IDFA）、連絡先、正確な位置情報、タッチの生の座標・識別子、圧力・速度・移動の生データを収集しません。対応端末では触覚フィードバックを使用し、アプリに含まれる効果音を再生します。カメラ、マイク、写真、連絡先、位置情報へのアクセス権限は要求しません。</p>
+      <p>アカウント作成やログインは不要です。子どもを含む利用者から、名前やメールアドレスなどの直接識別情報を意図的に収集することはありません。Singularの18歳以上の確認はインストール測定にのみ適用され、従来のPostHog分析については上記のとおりです。</p>
+      <p>バージョン1.1.2のアプリ内ネットワーク送信は上記のPostHog分析に限られ、その他のネットワーク機能はありません。今後インストール測定を提供するバージョンでは、同意した場合にSingularへの送信が追加されます。</p>
+
+      <h3>6. お問い合わせと削除の依頼</h3>
+      <p>プライバシーに関するご質問やPostHog・Singularデータの削除依頼は、<a href="mailto:mallangi.support@gmail.com">mallangi.support@gmail.com</a>へお送りください。アプリのバージョンと対象サービスをお知らせいただくと確認に役立ちます。ログインアカウントがないため、該当するインストールのデータを探すために追加情報が必要な場合があります。削除は自動では行われません。対象の情報を特定し、PostHog・Singularの各サービスで対応できる範囲を確認したうえで、手順をご案内します。</p>
+      <p>お問い合わせメールで直接提供されたメールアドレスと内容は、返信のために使用します。これは上記のアプリで収集しない情報とは別です。Singularのプライバシーに関する連絡先は、<a href="mailto:privacy@singular.net">privacy@singular.net</a>です。</p>
+      <p><a href="./2026-08-13.html" hreflang="en">以前のポリシー：2026年8月13日適用の案内（英語）</a></p>
+      <a class="top" href="#top">言語の選択に戻る ↑</a>
+    </article>
   </main>
 </body>
 </html>
