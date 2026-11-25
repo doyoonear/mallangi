@@ -29,10 +29,10 @@
       <h2>Data Collection</h2>
       <p>We collect pseudonymous product-interaction data, such as app opens, play interaction categories (tap, drag, or stretch), a coarse touch area (center, left, right, top, or bottom), touch-count and duration ranges, selected squishy types and color changes, sound-setting changes, settings or support-link opens, and when the app asks for an App Store rating. We use a randomly generated app-installation identifier to distinguish event sequences on the same installation.</p>
       <p>PostHog automatically adds limited technical context to each event: app version and build, bundle identifier, device model/type, operating-system version, screen dimensions, language, time zone, Wi-Fi or cellular connection category, TestFlight/sideload status, an anonymous session identifier, and the PostHog SDK version.</p>
-      <p>We do not collect names, email addresses, account details, advertising identifiers, contacts, precise location, raw touch coordinates, touch identifiers, or raw touch-pressure, speed, and movement data.</p>
+      <p>We do not collect names, email addresses, account details, advertising identifiers, contacts, GPS-based precise location, raw touch coordinates, touch identifiers, or raw touch-pressure, speed, and movement data.</p>
 
       <h2>Analytics Provider</h2>
-      <p>We use PostHog, Inc. to process this pseudonymous analytics data in the United States. PostHog is configured to discard client IP addresses.</p>
+      <p>We use PostHog, Inc. to process this pseudonymous analytics data in the United States. PostHog receives the IP address of the device's network connection with each event, stores it, and uses it to estimate approximate location (country, region, and city level). The app does not request or use device location services.</p>
 
       <h2>Tracking and Advertising</h2>
       <p>Mallangi does not track you across apps or websites. We do not use analytics data for advertising, share it with advertising networks or data brokers, or combine it with third-party data.</p>
